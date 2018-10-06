@@ -7,3 +7,5 @@ Parses a few blacklists, aggregates their data and prepares a file, ready to imp
 Original script found on Joshaven Potter's website: http://joshaven.com/resources/tricks/mikrotik-automatically-updated-address-list/
 
 CIDR calculator by Kai Schlichting: http://www.spamshield.org/
+
+Based on that, figure out which license applies here. My modifications are free to use by anyone. Credit would be nice, but it's not necessary.
