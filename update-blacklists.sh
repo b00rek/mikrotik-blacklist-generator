@@ -1,5 +1,5 @@
 #!/bin/sh
-saveTo=.
+saveTo=/etc/mikrotik-blacklist
 exportTo=/var/www
 now=$(date);
 
@@ -14,7 +14,7 @@ wget -q -O - http://malc0de.com/bl/IP_Blacklist.txt | awk --posix '/^[0-9]{1,3}\
 
 cat $saveTo/dshield.txt $saveTo/spamhausdrop.txt $saveTo/spamhausedrop.txt $saveTo/malc0de.txt $saveTo/blocklistde.txt > $saveTo/all.txt
 
-cat $saveTo/all.txt | $saveTo/cidr-convert.bin > $saveTo/all-minified.txt
+cat $saveTo/all.txt | /usr/local/bin/cidr-convert.bin > $saveTo/all-minified.txt
 
 echo "# Generated on $now" > $exportTo/z_blacklist.rsc
 echo "/ip firewall address-list" >> $exportTo/z_blacklist.rsc
