@@ -18,7 +18,7 @@ Parses a few blacklists, aggregates their data and prepares a file, ready to imp
 2. Copy the contents of **blacklist_update.rsc** into it.
 3. Modify the **blacklistURL** variable to point to your web server, where generated blacklist is accessible.
 3. Create a new scheduler that will call **blacklist_update** script at your preferred interval. I suggest once or twice per day.
-4. Create firewall rules in **input** and **forward** chains that will tarpit/drop/reject if source or destination is on **z_blacklist** address list.
+4. Create firewall rules in **input**, **forward**, and if you're really paranoid, even in **output** chains that will tarpit/drop/reject if source or destination is on **z_blacklist** address list.
 
 # What it actually does
 
