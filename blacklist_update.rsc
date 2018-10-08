@@ -1,9 +1,11 @@
+:local blacklistURL "http://192.168.1.100/z_blacklist.rsc"
+
 :local updateOk true
 :local importOk true
 
 :do {
     /log info "Blacklist: fetching update..."
-    /tool fetch url="http://172.16.7.11/z_blacklist.rsc" output=file dst-path="z_blacklist.rsc"
+    /tool fetch url="$blacklistURL" output=file dst-path="z_blacklist.rsc"
 } on-error={
     /log error "Blacklist: fetching update failed."
     :set updateOk false
