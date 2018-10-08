@@ -41,7 +41,7 @@ Blacklists are only a small part of a good defense strategy, which you need to t
 Bottom line is: Don't Test In Production™
 
 # Licensing
-Original script found on Joshaven Potter's website: http://joshaven.com/resources/tricks/mikrotik-automatically-updated-address-list/
+Original Bash script found on Joshaven Potter's website: http://joshaven.com/resources/tricks/mikrotik-automatically-updated-address-list/
 
 CIDR calculator by Kai Schlichting: http://www.spamshield.org/
 
