@@ -9,7 +9,8 @@ wget -q -O - http://feeds.dshield.org/block.txt | awk --posix '/^[0-9]{1,3}\.[0-
 wget -q -O - http://www.spamhaus.org/drop/drop.txt | awk --posix '/^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\// { print $1 ;}' > $saveTo/spamhausdrop.txt
 wget -q -O - http://www.spamhaus.org/drop/edrop.txt | awk --posix '/^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\// { print $1 ;}' > $saveTo/spamhausedrop.txt
 wget -q -O - http://malc0de.com/bl/IP_Blacklist.txt | awk --posix '/^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}/ { print $1 ;}' > $saveTo/malc0de.txt
-wget -q -O - http://lists.blocklist.de/lists/all.txt | awk --posix '/^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}/ { print $1 ;}' > $saveTo/blocklistde.txt
+#This is a big one - may block more than you'd like, and it requires a lot of memory - at a minimum 128MB to properly import and not lock up your device!
+#wget -q -O - http://lists.blocklist.de/lists/all.txt | awk --posix '/^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}/ { print $1 ;}' > $saveTo/blocklistde.txt
 
 cat $saveTo/dshield.txt $saveTo/spamhausdrop.txt $saveTo/spamhausedrop.txt $saveTo/malc0de.txt $saveTo/blocklistde.txt > $saveTo/all.txt
 
