@@ -27,7 +27,7 @@ Parses a few blacklists, aggregates their data and prepares a file, ready to imp
 2. Fetches various blacklists, parses them in a way that only **IP/MaskBit** remain and saves each to it's own **.txt** file.
 3. Concatenates all fetched blacklists and runs them through **cidr-convert.bin**.
 4. It's quite possible that certain IPs or ranges from different blacklists overlap with each other. Some blacklists use **IP/MaskBit** format, others list each IP address separately. **cidr-convert.bin** in a way "minifies" all the IP addresses by writing them in a CIDR notation. This way we don't have to worry about having 64 different entries in our blacklist, when we can only have one for a certain IP range.
-5. Finally, IP ranges are appended and prepended with RouterOS "try catch" block. More about this later.
+5. Finally, IP ranges are appended and prepended with RouterOS's "try catch" block. More about this later.
 
 ### The Mikrotik script
 It simply fetches our generated blacklist and imports it. Could be a lot shorter, but apparently "try catch" on RouterOS doesn't work as it should.
