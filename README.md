@@ -36,7 +36,7 @@ It simply fetches our generated blacklist and imports it. Could be a lot shorter
 Is actually a RouterOS script. It tries to add blacklisted IPs to address list **z_blacklist** with a timeout of 3 days. If an IP address already exists there, it just updates the 3 days timeout again to 3 days. This way you don't ever have to remove old IP addresses from your blacklist before importing new ones and if by any chance your web server isn't accessible for 3 days, or fetching of original blacklists fails once or twice, you still remain protected until the 3 days timeout runs out.
 
 # Additional considerations
-Blacklists are only a small part of a good defense strategy, which you need to think thoroughly about. You can also very easily implement a simple honeypot and portscan detection on your Mikrotik device, just through some basic firewall rules. But keep in mind that nothing in this world is really black and white. For example, you might blacklist an IP that's attacking you, but behind that IP could very well be one of your friendly users, whose computer could be compromised with some malware he or she doesn't even know about.
+Blacklists are only a small part of a good defense strategy, which you need to think thoroughly about. You can also very easily implement a simple honeypot and portscan detection on your Mikrotik device, just through some basic firewall rules. But keep in mind that nothing in this world is really black and white. For example, you might blacklist an IP that's attacking you, but behind that IP could very well be one of your friendly customers, whose computer could be compromised with some malware he or she doesn't even know about.
 
 Bottom line is: Don't Test In Production™
 
